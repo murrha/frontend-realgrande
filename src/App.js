@@ -9,6 +9,8 @@ import {Routes, Route} from 'react-router-dom';
 import SearchedHouse from './components/SearchedHouse';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import axios from 'axios'; 
+import EnquiryList from './components/EnquiryList';
 
 function App() {
 
@@ -16,31 +18,18 @@ function App() {
 
   //useEffect to reach houses.json and send one house obj to House.js
   //we use it when we want to get information for the component once
-  // useEffect(() => {
-  //   console.log("in useEffect");
-
-
-  //   //writing a function within a function
-  //   const fetchData = async () => {
-  //     let resp = await fetch('/houses.json'); //goes to the url and gives what it's supposed to give
-  //     let data = resp.json();
-      
-  //     setHouseData(data);
-  //     console.log(houseData); 
-  //   }    
-
-  //   fetchData(); 
-    
-  //   //write data to the state so we can use it anywhere
-  // }, []);
 
   useEffect(() => {
     console.log('in useEffect');
-    const fetchData = async ()=> {
-      let resp =  await fetch('/houses.json');
-      let data = await resp.json();
-      //console.log(' data from json - ');
-      //console.log(data);
+    const fetchData = async () => {
+      // let resp =  await fetch ('http://localhost:3002/');
+      // console.log(resp);
+      // let data = await resp.json();
+      // console.log(data); 
+     
+      let resp = await axios.get('http://localhost:3002');
+      let data = await resp.data;
+      
       setHousesData(data);    
     
      // console.log('data from state');
@@ -62,6 +51,7 @@ function App() {
         <Route path="searchedHouse/:id" element={<SearchedHouse houses={housesData}/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/enquiries" element={<EnquiryList/>}/>
       </Routes>
         
       <Footer/>

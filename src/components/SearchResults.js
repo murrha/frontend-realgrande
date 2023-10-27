@@ -12,15 +12,15 @@ const SearchResults = (props) => {
 
     //filter though the array of house objects
     //get those house objects that belong to the selected county
-    let filteredHousesArray = props.houses.filter((elem) => elem.county == paramsObj.county);
+    let filteredHousesArray = props.houses.filter((elem) => elem.county === paramsObj.county);
     console.log(filteredHousesArray);
 
 
-    return (<div classNameName="row">
+    return (<div className="row">
         <h4>Search results - {paramsObj.county}</h4>
         <div className="table-responsive">
-            <table className="table table-primary table-hover">
-                <thead>
+            <table className="table table-hover table-warning">
+                <thead >
                     <tr>
                         <th scope="col">Address</th>
                         <th scope="col">Price</th>

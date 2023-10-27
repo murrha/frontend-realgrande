@@ -12,7 +12,7 @@ const SearchResultsRow = (props) => {
 
     return (<>
     <tr key={props.house._id} onClick={clickHandler}>
-                        <td scope="row">{props.house.address}</td>
+                        <td>{props.house.address}</td>
                         <td>{props.house.price}</td>
     </tr>
     

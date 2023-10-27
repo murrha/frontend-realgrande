@@ -26,7 +26,7 @@ const Filter = (props) => {
 
     return (<>
 
-    <div className="row bg-warning">
+    <div className="row py-3 border border-secondary-subtle">
        
         <div className="col-sm-2 offset-sm-4">
             <h6>Select county</h6>

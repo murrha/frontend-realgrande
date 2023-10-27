@@ -31,16 +31,15 @@ const House = (props) => {
     if (!props.houseinfo) {
         return <p>Loading...</p>;
       }
-
    
     return (
         <>
-        <div className="row">
+        <div className="row my-4">
             <div className="col-sm-6">
-                <b>{props.houseinfo.address}</b>
+                <h3>{props.houseinfo.address}</h3>
             </div>        
             <div className="col-sm-6">
-                <b> Price: USD {props.houseinfo.price}</b>
+                <h3> Price: ${props.houseinfo.price} USD</h3>
             </div>
         </div>
         <div className="row">
@@ -48,7 +47,7 @@ const House = (props) => {
                 <img className='img-fluid' src={`/img/${props.houseinfo.photo}`} alt="house"/>
             </div>
             <div className="col-sm-6">
-            <p>Description</p>
+            <h5>Description</h5>
                 <p>{props.houseinfo.description}</p>
                 
             </div>
