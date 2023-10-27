@@ -37,7 +37,7 @@ const EnquiryList = () => {
                         <tbody>
                             
                             {enquiries.map((elem) => {
-                                return <tr className="" key={elem.id}> 
+                                return <tr className="" key={elem._id}> 
                                     <td>{elem.ename}</td>
                                     <td>{elem.email}</td>
                                     <td>{elem.date}</td>

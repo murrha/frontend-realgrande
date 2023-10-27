@@ -51,16 +51,16 @@ const SignUp = () => {
                     <form>
                         <div className="mb-3">
                             <label htmlForm="" className="form-label">Name</label>
-                            <input type="text" name="name" onChange={(e) => changeHandler(e)} id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                            <input type="text" name="name" onChange={(e) => changeHandler(e)} id="name" className="form-control" placeholder="" aria-describedby="helpId" />
                             <br></br>
 
                             <label htmlForm="" className="form-label">Email</label>
-                            <input type="text" name="email" onChange={(e) => changeHandler(e)} id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                            <input type="text" name="email" onChange={(e) => changeHandler(e)} id="email" className="form-control" placeholder="" aria-describedby="helpId" />
                             <br></br>
 
 
                             <label htmlForm="" className="form-label">Password</label>
-                            <input type="password" name="password" onChange={(e) => changeHandler(e)} id="" className="form-control" placeholder="" aria-describedby="helpId" />
+                            <input type="password" name="password" onChange={(e) => changeHandler(e)} id="password" className="form-control" placeholder="" aria-describedby="helpId" />
                             <br></br>
 
                             <button type="submit" onClick={(e) => submitHandler(e)} className="btn btn-primary">Submit</button>

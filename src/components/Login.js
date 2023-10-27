@@ -70,11 +70,11 @@ const Login = () => {
         <form>
             <div className="mb-3">
               <label htmlForm="email" className="form-label">Email</label>
-              <input type="text" onChange={(e) => changeHandler(e)} name="email" id="" className="form-control" placeholder="" aria-describedby="helpId" />
+              <input type="text" onChange={(e) => changeHandler(e)} name="email" id="email" className="form-control" placeholder="" aria-describedby="helpId" />
               <br></br>
 
               <label htmlForm="password" className="form-label">Password</label>
-              <input type="password" onChange={(e) => changeHandler(e)} name="password" id="" className="form-control" placeholder="" aria-describedby="helpId"/>
+              <input type="password" onChange={(e) => changeHandler(e)} name="password" id="password" className="form-control" placeholder="" aria-describedby="helpId"/>
               <br></br>
 
               <button type="button" onClick={(e) => clickHandler(e)} className="btn btn-primary">Login</button>
