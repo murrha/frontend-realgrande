@@ -33,7 +33,7 @@ const Filter = (props) => {
         </div>
         <div className="col-sm-6">
             <select onChange={(e) => changeHandler(e)}>
-                <option key="select" value="select">Select</option>
+                {/* <option key="select" value="select">Select</option> */}
                 {distinctCounties.map((county)=> <option key={county} value={county}> {county} </option>)}
 
                 {/* <option value="county1">County 1</option>
