@@ -20,7 +20,7 @@ const Enquiry = () => {
 
         try{
 
-            let resp = await axios.post('http://localhost:3002/register', {...enquiryObj});
+            let resp = await axios.post(process.env.REACT_APP_BACKENDURL+ 'register', {...enquiryObj});
             let data = await resp.data;
             console.log(data);
             setSuccessMsg('Thanks for reaching out! We will get back to you soon!')

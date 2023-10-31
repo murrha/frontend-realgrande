@@ -8,7 +8,7 @@ const EnquiryList = () => {
     //ename, email, remarks, date
     useEffect(() => {
 
-        async function fetchData() {let resp = await axios.get('http://localhost:3002/allenquiries');
+        async function fetchData() {let resp = await axios.get(process.env.REACT_APP_BACKENDURL + 'allenquiries');
         let data = await resp.data;
 
         console.log(data); 

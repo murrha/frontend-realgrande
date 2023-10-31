@@ -27,7 +27,8 @@ function App() {
       // let data = await resp.json();
       // console.log(data); 
      
-      let resp = await axios.get('http://localhost:3002');
+      // let resp = await axios.get('http://localhost:3002');
+      let resp = await axios.get(process.env.REACT_APP_BACKENDURL)
       let data = await resp.data;
       
       setHousesData(data);    

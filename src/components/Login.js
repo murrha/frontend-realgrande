@@ -26,7 +26,7 @@ const Login = () => {
 
         let authCheck = async () => {
             try {
-                let resp = await axios.post('http://localhost:3002/login', { ...formObj });
+                let resp = await axios.post(process.env.REACT_APP_BACKENDURL + 'login', { ...formObj });
                 let userData = await resp.data;
                 
 
