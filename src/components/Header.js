@@ -29,7 +29,7 @@ const Header = () => {
                 <Link to="/"><img className="logo my-3" src="/img/logo.png" alt="logo here" width="100px" height="100px"></img></Link>
             </div>
             <div className="col-sm-5">
-                <p className="m-0 tagline text-center">Find your dream home here!</p>
+                <p className="m-0 tagline text-center">Welcome to FSD! Find your dream home here!</p>
             </div>
             <div className="col-sm-4 text-center">
                 {sessionStorage.getItem('custName') ? 
